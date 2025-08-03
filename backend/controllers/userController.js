@@ -3,19 +3,14 @@ const User = require('../models/User');
 const Post = require('../models/Post'); // <-- Import the Post model
 const generateToken = require('../utils/generateToken');
 const bcrypt = require('bcryptjs');
-
-// @desc    Register a new user
-// @route   POST /api/users/register
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password, bio } = req.body;
-
   const userExists = await User.findOne({ email });
 
   if (userExists) {
     res.status(400);
     throw new Error('User already exists');
   }
-
   const user = await User.create({
     name,
     email,
@@ -37,8 +32,6 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 });
 
-// @desc    Auth user & get token
-// @route   POST /api/users/login
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
@@ -57,9 +50,6 @@ const loginUser = asyncHandler(async (req, res) => {
     throw new Error('Invalid email or password');
   }
 });
-
-// @desc    Get user profile
-// @route   GET /api/users/:id
 const getUserProfile = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id).select('-password');
   const posts = await Post.find({ user: req.params.id }).populate('user', 'name').sort({ createdAt: -1 });
