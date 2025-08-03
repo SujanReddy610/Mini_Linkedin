@@ -1,18 +1,15 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext.jsx';
-
 const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [bio, setBio] = useState('');
   const { register } = useContext(AuthContext);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     register(name, email, password, bio);
   };
-
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
@@ -59,5 +56,4 @@ const Register = () => {
     </form>
   );
 };
-
 export default Register;
