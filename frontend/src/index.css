@@ -178,15 +178,13 @@ body {
   color: #4b5563;
 }
 
-/*
-* Final "World-Class" Header Design
-*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #f0f2f5; /* A soft, light gray background for the page */
+  background-color: #f0f2f5; 
   color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -196,8 +194,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
-  backdrop-filter: blur(10px); /* The key to the glassmorphism effect */
+  background-color: rgba(255, 255, 255, 0.7); 
+  backdrop-filter: blur(10px); 
   border-bottom: 1px solid rgba(220, 220, 220, 0.5);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   padding: 1rem 0;
@@ -214,7 +212,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
-  color: #007bff; /* Primary brand color */
+  color: #007bff; 
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -271,7 +269,7 @@ body {
   border: none;
   padding: 0.6rem 1.5rem;
   font-weight: 600;
-  border-radius: 25px; /* Fully rounded pill shape */
+  border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -281,7 +279,6 @@ body {
   background-color: #c82333;
 }
 
-/* General Typography & Component Styling */
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
