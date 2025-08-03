@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const PostSchema = mongoose.Schema(
   {
     user: {
@@ -16,7 +15,6 @@ const PostSchema = mongoose.Schema(
     timestamps: true,
   }
 );
-
 const Post = mongoose.model('Post', PostSchema);
 
 module.exports = Post;
